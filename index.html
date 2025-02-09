@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <p class="header">Library</p>
+    </header>
+    <main class="main">
+      <div class="btn-container">
+        <button class="add-book-btn">Add a Book</button>
+        <dialog id="add-book-dialog">
+          <form method="dialog" id="add-book-form">
+            <button id="close-btn" formnovalidate>X</button>
+            <div class="inside-form">
+              <div>
+                <label for="title">Title:</label>
+                <input
+                  type="text"
+                  id="title"
+                  class="form-field"
+                  placeholder="Please enter the book's title"
+                  required
+                />
+              </div>
+              <div>
+                <label for="author">Author:</label>
+                <input
+                  type="text"
+                  id="author"
+                  class="form-field"
+                  placeholder="Please enter the author's name"
+                  required
+                />
+              </div>
+              <div>
+                <label for="pages">Pages:</label>
+                <input
+                  type="number"
+                  id="pages"
+                  class="form-field"
+                  placeholder="Please enter the of pages of the book"
+                  required
+                  min="1"
+                />
+              </div>
+              <div checkbox">
+                <label for="read">Read:</label>
+                <input type="checkbox" id="read" class="form-field" />
+              </div>
+
+              <button id="dialog-add-book-btn">Add Book</button>
+              <div class="error-container">
+                <p id="form-error" hidden>
+                  Please make sure all the fields are filled out.
+                </p>
+              </div>
+            </div>
+          </form>
+        </dialog>
+      </div>
+      <div class="table-container">
+        <table>
+          <thead>
+            <th scope="col">Name</th>
+            <th scope="col">Author</th>
+            <th scope="col">Pages</th>
+            <th scope="col">Status</th>
+            <th scope="col">Remove</th>
+            <th scope="col">Toggle Read</th>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
